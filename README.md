@@ -47,7 +47,3 @@ The system is built on two core roles—**Admin** and **Employee**—and aims to
 
 4. **Run the Application:**
    Press `F5` in Visual Studio to launch the project.
-
----
-
-*Developed as a portfolio project to demonstrate proficiency in ASP.NET Core and SQL Server integration.*
