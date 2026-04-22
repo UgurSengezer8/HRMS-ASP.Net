@@ -48,20 +48,20 @@ The system is built on two core roles—**Admin** and **Employee**—and aims to
 4. **Run the Application:**
    Press `F5` in Visual Studio to launch the project.
 
-![](Screenshots\2026-04-22-19-22-38-image.png)
+![](https://github.com/UgurSengezer8/HRMS-ASP.Net.git/Screenshots/2026-04-22-19-22-38-image.png)
 
-![](Screenshots\2026-04-22-19-23-06-image.png)
+![](https://github.com/UgurSengezer8/HRMS-ASP.Net.git/Screenshots/2026-04-22-19-23-06-image.png)
 
-![](Screenshots\2026-04-22-19-23-15-image.png)
+![](https://github.com/UgurSengezer8/HRMS-ASP.Net.git/Screenshots/2026-04-22-19-23-15-image.png)
 
-![](Screenshots\2026-04-22-19-23-30-image.png)
+![](https://github.com/UgurSengezer8/HRMS-ASP.Net.git/Screenshots/2026-04-22-19-23-30-image.png)
 
-![](Screenshots\2026-04-22-19-23-41-image.png)
+![](https://github.com/UgurSengezer8/HRMS-ASP.Net.git/Screenshots/2026-04-22-19-23-41-image.png)
 
-![](Screenshots\2026-04-22-19-23-48-image.png)
+![](https://github.com/UgurSengezer8/HRMS-ASP.Net.git/Screenshots/2026-04-22-19-23-48-image.png)
 
-![](Screenshots\2026-04-22-19-23-57-image.png)
+![](https://github.com/UgurSengezer8/HRMS-ASP.Net.git/Screenshots/2026-04-22-19-23-57-image.png)
 
-![](Screenshots\2026-04-22-19-24-08-image.png)
+![](https://github.com/UgurSengezer8/HRMS-ASP.Net.git/Screenshots/2026-04-22-19-24-08-image.png)
 
-![](Screenshots\2026-04-22-19-24-19-image.png)
+![](https://github.com/UgurSengezer8/HRMS-ASP.Net.git/Screenshots/2026-04-22-19-24-19-image.png)
