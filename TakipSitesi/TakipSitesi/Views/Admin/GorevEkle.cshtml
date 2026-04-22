@@ -1,0 +1,84 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model List<Calisan>
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form asp-action="GorevEkle" method="post">
+                <h4 class="card-title mb-4">Görev Oluştur</h4>
+
+                <!-- Personel Seçimi -->
+                <div class="mb-3">
+                    <label for="personelSelect" class="form-label"><strong>Personel Seç</strong></label>
+                    <select name="calisan" class="form-select" id="personelSelect" required>
+
+                        <option selected value="" disabled>Personel Seçiniz</option>
+                        @foreach (var item in Model)
+                        {
+                            <option value="@item.Id">@item.Ad</option>
+
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="personelSelect" class="form-label"><strong>Öncelik Drumu</strong></label>
+                    <select name="oncelik" class="form-select" id="personelSelect" required>
+
+                        <option value="" selected disabled>Öncelik durumu seçin</option>
+                            <option value="Az">Az</option>
+                        <option value="Orta">Orta</option>
+                        <option value="Yüksek">Yüksek</option>
+                    </select>
+                </div>
+
+                <!-- Görev Başlığı -->
+                <div class="mb-3">
+                    <label for="gorevBaslik" class="form-label"><strong>Görev Başlığı</strong></label>
+                    <input type="text" name="Baslik" class="form-control" id="gorevBaslik" placeholder="Görev başlığı giriniz" required>
+                </div>
+
+                <!-- Görev Açıklaması -->
+                <div class="mb-4">
+                    <label for="gorevAciklama" class="form-label"><strong>Görev Açıklaması</strong></label>
+                    <textarea name="aciklama" class="form-control" id="gorevAciklama" rows="4" placeholder="Görev açıklamasını yazınız" required></textarea>
+                </div>
+
+                <!-- Butonlar -->
+                <div class="d-flex justify-content-end gap-2">
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </form>
+            <!-- Başlık -->
+            
+
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+
+    @if (TempData["basarili"] != null)
+    {
+        <script>
+
+            Swal.fire({
+                title: "Başarılı",
+                text: "@Html.Raw(TempData["basarili"])",
+                icon: "success"
+            });
+        </script>
+    }
+    @if (TempData["uyari"] != null)
+    {
+        <script>
+
+            Swal.fire({
+                title: "Uyarı",
+                text: "@Html.Raw(TempData["uyari"])",
+                icon: "warning"
+            });
+        </script>
+    }
+
+}

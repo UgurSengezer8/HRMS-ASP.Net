@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model List<Izin>
+
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="card p-3 mb-3">
+            <form action="/admin/IzinDetay/@item.Id" method="get">
+                <div class="row align-items-center">
+                    <div class="col-4">
+                        <h5>@item.Kim.Ad</h5>
+                    </div>
+                    <div class="col-4 text-center">
+                        <span>@item.Baslangic - @item.Bitis</span>
+                    </div>
+                    <div class="col-4 text-end">
+                        <input class="btn btn-primary" type="submit" name="name" value="Detay" />
+
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    }
+    
+</div>
+@section Scripts
+{
+
+    @if (TempData["basarili"] != null)
+    {
+        <script>
+
+            Swal.fire({
+                title: "Başarılı",
+                text: "@Html.Raw(TempData["basarili"])",
+                icon: "success"
+            });
+        </script>
+    }
+    @if (TempData["uyari"] != null)
+    {
+        <script>
+
+            Swal.fire({
+                title: "Uyarı",
+                text: "@Html.Raw(TempData["uyari"])",
+                icon: "warning"
+            });
+        </script>
+    }
+
+}

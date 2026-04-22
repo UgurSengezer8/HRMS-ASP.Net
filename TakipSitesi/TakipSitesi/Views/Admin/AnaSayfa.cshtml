@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model AdminAnasayfaViewModel
+<div class="container" style="max-width: 70%;">
+    <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card bg-primary text-white text-center">
+                <div class="card-body">
+                    <i class="bi bi-person-badge fs-2 mb-2 d-block"></i>
+                    <h6 class="card-title">Çalışan Sayısı</h6>
+                    <h2>@Model.CalisanSayisi</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card bg-success text-white text-center">
+                <div class="card-body">
+                    <i class="bi bi-diagram-3 fs-2 mb-2 d-block"></i>
+                    <h6 class="card-title">Departman Sayısı</h6>
+                    <h2>@Model.DepartmanSayisi</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card bg-warning text-dark text-center">
+                <div class="card-body">
+                    <i class="bi bi-list-check fs-2 mb-2 d-block"></i>
+                    <h6 class="card-title">Verilen Görev Sayısı</h6>
+                    <h2>@Model.GorevSayisi</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card bg-info text-white text-center">
+                <div class="card-body">
+                    <i class="bi bi-check2-square fs-2 mb-2 d-block"></i>
+                    <h6 class="card-title">Tamamlanan Görev Sayısı</h6>
+                    <h2>@Model.BitmisGorevSayisi</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

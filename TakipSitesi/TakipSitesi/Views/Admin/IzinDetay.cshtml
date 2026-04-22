@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model Izin
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-body">
+
+            <!-- Başlık -->
+            <h4 class="card-title mb-4">İzin Talebi Detayı</h4>
+
+            <!-- Çalışan Bilgileri -->
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <strong>Çalışan Adı:</strong> @Model.Kim.Ad
+                </div>
+                <div class="col-md-6">
+                    <strong>Departman:@Model.Kim.Departman.Isim</strong> 
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <strong>Başlangıç Tarihi:</strong> @Model.Baslangic
+                </div>
+                <div class="col-md-6">
+                    <strong>Bitiş Tarihi:</strong> @Model.Bitis
+                </div>
+            </div>
+
+            <!-- Çalışanın Açıklaması -->
+            <div class="mb-4">
+                <strong>Çalışanın Açıklaması:</strong>
+                <p class="border p-2 rounded bg-light">@Model.Aciklama</p>
+            </div>
+            <form action="/admin/IzinDetay/@Model.Id" method="post">
+                <div class="mb-4">
+                    <strong>Yöneticinin Açıklaması:</strong>
+                    <textarea name="aciklama" class="form-control" rows="3" placeholder="Yorumunuzu yazın..." required></textarea>
+                </div>
+
+                <!-- Kabul Et / Reddet Butonları -->
+                <div class="d-flex justify-content-end gap-2">
+                    <button type="submit" name="buton" value="kabul" class="btn btn-success">Kabul Et</button>
+                    <button type="submit" name="buton" value="red" class="btn btn-danger">Reddet</button>
+                </div>
+            </form>
+            <!-- Admin Açıklaması (Yazılabilir) -->
+            
+
+        </div>
+    </div>
+</div>

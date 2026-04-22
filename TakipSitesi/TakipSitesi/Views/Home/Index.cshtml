@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Calisan
+<div class="profile-card col-6 ms-2">
+    <img src="@Model.Resim" alt="Profil Fotoğrafı" class="profile-img" />
+
+    <div class="profile-info">
+        <h5>Ad: @Model.Ad</h5>
+        <h5>Soyad: @Model.Soyad</h5>
+        <h5>Yaş: @Model.Yas</h5>
+        <h5>Departman: @Model.Departman.Isim</h5>
+        <h5>İşe Giriş Yılı: @Model.Baslangic</h5>
+    </div>
+</div>

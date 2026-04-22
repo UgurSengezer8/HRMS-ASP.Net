@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Gorev>
+<div class="content-card col-6 ms-2">
+    <h4 class="mb-4">Görevlerim</h4>
+
+    @foreach (var gorev in Model)
+    {
+        <div class="talep-item">
+            <h5>@gorev.Baslik</h5>
+                <button class="btn @(gorev.Oncelik == "Yüksek" ? "btn-danger" : gorev.Oncelik == "Orta" ? "btn-warning" :gorev.Oncelik=="Az"? "btn-secondary":"")" disabled>
+                    Öncelik: @gorev.Oncelik
+                </button>
+
+                <button class="btn @(gorev.Durum=="Teslim Edildi" ? "btn-success" :gorev.Durum=="Çalışıyor" ? "btn-primary":"btn-warning")" disabled>
+                    @(gorev.Durum == "Teslim Edildi" ? "Tamamlandı" : gorev.Durum == "Çalışıyor" ? "Devam Ediyor":"Bekliyor")
+                </button>
+
+                <a href="/account/GorevDetay/@gorev.Id" class="btn btn-outline-primary">Detaylar</a>
+        </div>
+    }
+</div>
+@section Scripts
+{
+
+    @if (TempData["basarili"] != null)
+    {
+        <script>
+
+            Swal.fire({
+                title: "Başarili",
+                text: "@Html.Raw(TempData["basarili"])",
+                icon: "success"
+            });
+        </script>
+    }
+    @if (TempData["uyari"] != null)
+    {
+        <script>
+
+            Swal.fire({
+                title: "Uyarı",
+                text: "@Html.Raw(TempData["uyari"])",
+                icon: "warning"
+            });
+        </script>
+    }
+
+}

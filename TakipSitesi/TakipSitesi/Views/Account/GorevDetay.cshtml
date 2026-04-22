@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Gorev 
+
+        <!-- Sağdaki Kart (Görev Detay) -->
+<div class="profile-card col-6 ms-2 ">
+                <div class="card-body">
+                    <form action="/account/gorevdetay/@Model.Id" method="post">
+            <h4 class="card-title text-center mb-4">Görev Detayı</h4>
+
+
+            <!-- Görev Başlığı -->
+            <div class="mb-3">
+                <label class="form-label"><strong>Görev Başlığı:</strong></label>
+                <p class="form-control-plaintext">@Model.Baslik</p>
+            </div>
+
+            <!-- Görev Açıklaması -->
+            <div class="mb-3">
+                <label class="form-label"><strong>Görev Açıklaması:</strong></label>
+                <p class="form-control-plaintext">
+                    @Model.Aciklama
+                </p>
+            </div>
+
+            <!-- Bizim Gireceğimiz Açıklama -->
+            <div class="mb-3">
+                <label for="EkAciklama" class="form-label"><strong>Ek Açıklama:</strong></label>
+                <textarea class="form-control" name="EkAciklama" id="ekAciklama" rows="3" placeholder="Açıklama giriniz..." required>@Model.CalisanAciklama</textarea>
+            </div>
+
+            <!-- Durum Seçimi -->
+            <div class="mb-4">
+                <label for="durumSec" class="form-label"><strong>Durum:</strong></label>
+                <select name="Durum" class="form-select" id="durumSec" required>
+                    <option value="" selected disabled>Bekliyor</option>
+                    <option value="Teslim Edildi">Tamamlandı</option>
+                    <option value="Çalışıyor">Çalışıyorum</option>
+                </select>
+            </div>
+
+            <!-- Butonlar -->
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i> Gönder</button>
+            </div>
+                    </form>
+                    
+
+                </div>
+        </div>

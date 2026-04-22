@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Izin
+<div class="profile-card col-6 ms-2">
+    <form class="w-100" asp-action="IzinTalep" asp-controller="Account" method="post">
+        <h4 class="mb-4 text-center">İzin Talep Formu</h4>
+
+        <div class="form-group mb-3">
+            <label for="baslangic" class="form-label">Başlangıç Tarihi</label>
+            <input asp-for="@Model.Baslangic" type="date" id="baslangic" class="form-control mb-3" disabled>
+            
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="bitis" class="form-label">Bitiş Tarihi</label>
+            <input asp-for="@Model.Bitis" type="date" id="bitis" class="form-control" disabled>
+        </div>
+
+        <div class="form-group mb-4">
+            <div class="form-group">
+                <label for="aciklama" class="form-label">Açıklama</label>
+                <textarea id="aciklama" class="form-control" rows="5" placeholder="@Model.AdminAciklama" disabled></textarea>
+            </div>
+        </div>
+
+        <div class="status-button">
+            <button class="btn @(Model.Durum == "Onaylandı" ? "btn-success" : Model.Durum == "Reddedildi" ? "btn-danger" : "btn-warning") durum-button" disabled>
+                @Model.Durum
+            </button>
+        </div>
+    </form>
+</div>
+@section Scripts
+{
+
+    @if (TempData["basarili"] != null)
+    {
+        <script>
+
+            Swal.fire({
+                title: "Başarili",
+                text: "@Html.Raw(TempData["basarili"])",
+                icon: "success"
+            });
+        </script>
+    }
+    @if (TempData["uyari"] != null)
+    {
+        <script>
+
+            Swal.fire({
+                title: "Uyarı",
+                text: "@Html.Raw(TempData["uyari"])",
+                icon: "warning"
+            });
+        </script>
+    }
+
+}

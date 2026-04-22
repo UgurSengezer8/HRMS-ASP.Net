@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Izin>
+<div class="content-card col-6 ms-2">
+    <h4 class="mb-4">Taleplerim</h4>
+
+    @foreach (var talep in Model)
+    {
+        <div class="talep-item">
+            <h5>@talep.Id .Talep</h5>
+            <button class="btn @(talep.Durum == "Onaylandı" ? "btn-success" : talep.Durum == "Reddedildi" ? "btn-danger" : "btn-warning") durum-button" disabled>
+                @talep.Durum
+            </button>
+            <a href="/Account/IzinDetay/@talep.Id" class="btn btn-outline-primary">Detay</a>
+        </div>
+    }
+</div>
+@section Scripts
+{
+
+    @if (TempData["basarili"] != null)
+    {
+        <script>
+
+            Swal.fire({
+                title: "Başarili",
+                text: "@Html.Raw(TempData["basarili"])",
+                icon: "success"
+            });
+        </script>
+    }
+    @if (TempData["uyari"] != null)
+    {
+        <script>
+
+            Swal.fire({
+                title: "Uyarı",
+                text: "@Html.Raw(TempData["uyari"])",
+                icon: "warning"
+            });
+        </script>
+    }
+
+}

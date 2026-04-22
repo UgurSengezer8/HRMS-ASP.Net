@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Paneli</title>
+    <!-- Bootstrap Icons CDN -->
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TakipSitesi.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/vendor/sweetalert/sweetalert2.css" asp-append-version="true" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 30px;
+        }
+
+        .admin-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .btn-custom {
+            width: 100%;
+            padding: 15px 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="admin-container">
+        <div class="row g-2 mb-4 text-center">
+            <div class="col-12 col-lg"><a href="/admin/anasayfa" class="btn btn-primary btn-custom"><i class="bi bi-house-door"></i> Anasayfa</a></div>
+            <div class="col-12 col-lg"><a href="/admin/Departman" class="btn btn-primary btn-custom"><i class="bi bi-building"></i> Departman</a></div>
+            <div class="col-12 col-lg"><a href="/admin/Calisanlar" class="btn btn-primary btn-custom"><i class="bi bi-people"></i> Çalışanlar</a></div>
+            <div class="col-12 col-lg"><a href="/admin/Izinler" class="btn btn-primary btn-custom"><i class="bi bi-calendar2-week"></i> İzin Talepleri</a></div>
+            <div class="col-12 col-lg"><a href="/admin/Gorevekle" class="btn btn-primary btn-custom"><i class="bi bi-person-plus"></i> Görev Ata</a></div>
+            <div class="col-12 col-lg"><a href="/admin/Gorevler" class="btn btn-primary btn-custom"><i class="bi bi-list-task"></i> Verilen Görevler</a></div>
+            <div class="col-12 col-lg"><a href="/admin/Gorevler/Biten" class="btn btn-primary btn-custom"><i class="bi bi-check-circle"></i> Biten Görevler</a></div>
+            <div class="col-12 col-lg"><a href="/account/cikis" class="btn btn-danger btn-custom">Çıkış</a></div>
+
+        </div>
+        
+    </div>
+    @RenderBody()
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/vendor/sweetalert/sweetalert2.all.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+
+</html>

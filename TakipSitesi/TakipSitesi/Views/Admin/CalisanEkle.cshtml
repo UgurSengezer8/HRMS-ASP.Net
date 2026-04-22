@@ -1,0 +1,129 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model CalisanEkleViewModel
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h3 class="card-title text-center mb-4">Kullanıcı Oluştur</h3>
+            <form asp-action="CalisanEkle" method="post" enctype="multipart/form-data">
+
+                <div class="row g-3">
+
+                    <!-- Ad -->
+                    <div class="col-md-6">
+                        <label for="ad" class="form-label">Ad</label>
+                        <input asp-for="calisan.Ad" type="text" class="form-control" id="ad" placeholder="Adınızı girin" required>
+                    </div>
+
+                    <!-- Soyad -->
+                    <div class="col-md-6">
+                        <label for="soyad" class="form-label">Soyad</label>
+                        <input asp-for="calisan.Soyad" type="text" class="form-control" id="soyad" placeholder="Soyadınızı girin" required>
+                    </div>
+
+                    <!-- Kullanıcı Adı -->
+                    <div class="col-md-6">
+                        <label for="kullaniciAdi" class="form-label">Kullanıcı Adı</label>
+                        <input asp-for="calisan.KullaniciAdi" type="text" class="form-control" id="kullaniciAdi" placeholder="Kullanıcı adınızı girin" required>
+                    </div>
+
+                    <!-- Şifre -->
+                    <div class="col-md-6">
+                        <label for="sifre" class="form-label">Şifre</label>
+                        <input asp-for="calisan.Sifre" type="password" class="form-control" id="sifre" placeholder="Şifrenizi girin" required>
+                    </div>
+
+                    <!-- Yaş -->
+                    <div class="col-md-4">
+                        <label for="yas" class="form-label">Yaş</label>
+                        <input asp-for="calisan.Yas" type="number" class="form-control" id="yas" placeholder="Yaşınızı girin" required>
+                    </div>
+
+                    <!-- Telefon -->
+                    <div class="col-md-4">
+                        <label for="telefon" class="form-label">Telefon</label>
+                        <input asp-for="calisan.Telefon" type="text" class="form-control" id="telefon" placeholder="Telefon numaranızı girin " required>
+                    </div>
+
+                    <!-- Role -->
+                    <div class="col-md-4">
+                        <label for="role" class="form-label">Rol</label>
+                        <input asp-for="calisan.Role" type="text" class="form-control" id="role" placeholder="Rolü girin (örn: Admin)" required>
+                    </div>
+
+                    <!-- Departman (Dropdown) -->
+                    <div class="col-md-6">
+                        <!---->
+                        <label for="departman" class="form-label">Departman</label>
+                        <select asp-for="calisan.DepartmanId" id="departman" class="form-select" required>
+                            <option selected value="">Departman Seçin...</option>
+                            @foreach (var item in Model.departmanlar)
+                            {
+                                <option value="@item.Id">@item.Isim</option>
+
+                            }
+                        </select>
+                    </div>
+
+                    <!-- Başlangıç (Tarih Seçimi) -->
+                    <div class="col-md-6">
+                        <label for="baslangic" class="form-label">Başlangıç Tarihi</label>
+                        <input asp-for="calisan.Baslangic" type="date" class="form-control" id="baslangic" required>
+                    </div>
+
+                    <!-- Resim Yükleme -->
+                    <div class="col-md-6">
+                        <label for="resim" class="form-label">Profil Resmi</label>
+                        <input asp-for="Resim" type="file" class="form-control" id="resim" required>
+                    </div>
+
+                    <!-- Adres -->
+                    <div class="col-md-12">
+                        <label for="adres" class="form-label">Adres</label>
+                        <textarea asp-for="calisan.Adres" class="form-control" id="adres" rows="3" placeholder="Adresinizi girin" required></textarea>
+                    </div>
+
+                </div>
+
+                <!-- Butonlar -->
+                <div class="d-flex justify-content-between mt-4">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-check-circle me-2"></i> Oluştur
+                    </button>
+                    <a href="/admin/kullanicilar" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left-circle me-2"></i> Geri Dön
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+
+    @if (TempData["basarili"] != null)
+    {
+        <script>
+
+            Swal.fire({
+                title: "Başarılı",
+                text: "@Html.Raw(TempData["basarili"])",
+                icon: "success"
+            });
+        </script>
+    }
+    @if (TempData["uyari"] != null)
+    {
+        <script>
+
+            Swal.fire({
+                title: "Uyarı",
+                text: "@Html.Raw(TempData["uyari"])",
+                icon: "warning"
+            });
+        </script>
+    }
+
+}
