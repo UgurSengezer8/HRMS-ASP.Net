@@ -47,3 +47,22 @@ The system is built on two core roles—**Admin** and **Employee**—and aims to
 
 4. **Run the Application:**
    Press `F5` in Visual Studio to launch the project.
+   
+
+![](C:\Users\ugurs\AppData\Roaming\marktext\images\2026-04-22-19-22-38-image.png)
+
+![](C:\Users\ugurs\AppData\Roaming\marktext\images\2026-04-22-19-23-06-image.png)
+
+![](C:\Users\ugurs\AppData\Roaming\marktext\images\2026-04-22-19-23-15-image.png)
+
+![](C:\Users\ugurs\AppData\Roaming\marktext\images\2026-04-22-19-23-30-image.png)
+
+![](C:\Users\ugurs\AppData\Roaming\marktext\images\2026-04-22-19-23-41-image.png)
+
+![](C:\Users\ugurs\AppData\Roaming\marktext\images\2026-04-22-19-23-48-image.png)
+
+![](C:\Users\ugurs\AppData\Roaming\marktext\images\2026-04-22-19-23-57-image.png)
+
+![](C:\Users\ugurs\AppData\Roaming\marktext\images\2026-04-22-19-24-08-image.png)
+
+![](C:\Users\ugurs\AppData\Roaming\marktext\images\2026-04-22-19-24-19-image.png)

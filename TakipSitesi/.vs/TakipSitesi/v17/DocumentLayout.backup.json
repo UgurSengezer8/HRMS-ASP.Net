@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ugurs\\OneDrive\\Masa\u00FCst\u00FC\\Projeler\\TakipSitesi\\TakipSitesi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AF788C36-B8A7-4F5E-874F-BB9DDD4850F5}|TakipSitesi\\TakipSitesi.csproj|c:\\users\\ugurs\\onedrive\\masa\u00FCst\u00FC\\projeler\\takipsitesi\\takipsitesi\\takipsitesi\\views\\account\\giris.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF788C36-B8A7-4F5E-874F-BB9DDD4850F5}|TakipSitesi\\TakipSitesi.csproj|solutionrelative:takipsitesi\\views\\account\\giris.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Giris.cshtml",
+              "DocumentMoniker": "C:\\Users\\ugurs\\OneDrive\\Masa\u00FCst\u00FC\\Projeler\\TakipSitesi\\TakipSitesi\\TakipSitesi\\Views\\Account\\Giris.cshtml",
+              "RelativeDocumentMoniker": "TakipSitesi\\Views\\Account\\Giris.cshtml",
+              "ToolTip": "C:\\Users\\ugurs\\OneDrive\\Masa\u00FCst\u00FC\\Projeler\\TakipSitesi\\TakipSitesi\\TakipSitesi\\Views\\Account\\Giris.cshtml",
+              "RelativeToolTip": "TakipSitesi\\Views\\Account\\Giris.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-22T15:17:54.297Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
