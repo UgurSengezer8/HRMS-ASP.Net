@@ -32,16 +32,19 @@ The system is built on two core roles—**Admin** and **Employee**—and aims to
 1. **Clone the Repository:**
    
    ```bash
-   git clone [https://github.com/UgurSengezer8/your-repo-name.git](https://github.com/UgurSengezer8/your-repo-name.git)
+   git clone https://github.com/UgurSengezer8/HRMS-ASP.Net.git
    ```
+
 2. **Database Configuration:**
    Update the `ConnectionStrings` section in the `appsettings.json` file with your local SQL Server credentials.
+
 3. **Apply Migrations:**
    Create the database and tables using the **Package Manager Console** in Visual Studio:
    
    ```powershell
    Update-Database
    ```
+
 4. **Run the Application:**
    Press `F5` in Visual Studio to launch the project.
 
